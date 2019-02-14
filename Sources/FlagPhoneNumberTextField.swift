@@ -19,7 +19,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	/// The edges insets of the flag button
-	public var flagButtonEdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2) {
+	public var flagButtonEdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
 		didSet {
 			layoutSubviews()
 		}
@@ -28,7 +28,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	/// The size of the leftView
 	public var leftViewSize: CGSize {
 //        let width = flagSize.width + flagButtonEdgeInsets.left + flagButtonEdgeInsets.right + phoneCodeTextField.frame.width
-        let width =  flagButtonEdgeInsets.left + 80 + flagButtonEdgeInsets.right
+        let width =  flagButtonEdgeInsets.left + 85 + flagButtonEdgeInsets.right
 		let height = bounds.height
 
 		return CGSize(width: width, height: height)
