@@ -27,7 +27,8 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 
 	/// The size of the leftView
 	public var leftViewSize: CGSize {
-		let width = flagSize.width + flagButtonEdgeInsets.left + flagButtonEdgeInsets.right + phoneCodeTextField.frame.width
+//        let width = flagSize.width + flagButtonEdgeInsets.left + flagButtonEdgeInsets.right + phoneCodeTextField.frame.width
+        let width =  flagButtonEdgeInsets.left + 82 + flagButtonEdgeInsets.right 
 		let height = bounds.height
 
 		return CGSize(width: width, height: height)
@@ -156,13 +157,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 		for key in views.keys {
 			leftView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[\(key)]|", options: [], metrics: nil, views: views))
 		}
-        let border = CALayer()
-        border.backgroundColor = UIColor.red.cgColor
-        border.frame = CGRect(x: 0, y:
-            leftView!.frame.maxY, width: leftView!.frame.width, height: 4.0)
-
-        
-       leftView?.layer.addSublayer(border)
+       
 //        leftView?.addBorder(toSide: .Bottom,withColor: UIColor.red.cgColor,andThickness: 4.0)
 	}
 
