@@ -155,6 +155,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 		for key in views.keys {
 			leftView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[\(key)]|", options: [], metrics: nil, views: views))
 		}
+        leftView?.addBorder(toSide: .Bottom,withColor: UIColor.red.cgColor,andThickness: 4.0)
 	}
 
 	private func setupCountryPicker() {
