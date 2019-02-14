@@ -103,6 +103,13 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 
 		leftView?.frame = leftViewRect(forBounds: frame)
 		flagButton.imageEdgeInsets = flagButtonEdgeInsets
+    
+        let layers = leftView!.layer.sublayers
+        for layer in layers! {
+            if layer.name == "border"{
+                layer.frame = CGRect(x: 0, y: leftView!.frame.maxY, width: leftView!.frame.width, height: 4.0)
+            }
+        }
 	}
 
 	open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
@@ -119,6 +126,14 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 		setupLeftView()
 		setupCountryPicker()
 
+        let border = CALayer()
+        border.backgroundColor = UIColor.red.cgColor
+        border.frame = CGRect(x: 0, y:
+            leftView!.frame.maxY, width: leftView!.frame.width, height: 4.0)
+        
+        border.name = "border"
+        leftView?.layer.addSublayer(border)
+        
 		keyboardType = .phonePad
 		autocorrectionType = .no
 		addTarget(self, action: #selector(didEditText), for: .editingChanged)
@@ -155,7 +170,8 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 		for key in views.keys {
 			leftView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[\(key)]|", options: [], metrics: nil, views: views))
 		}
-        leftView?.addBorder(toSide: .Bottom,withColor: UIColor.red.cgColor,andThickness: 4.0)
+       
+//        leftView?.addBorder(toSide: .Bottom,withColor: UIColor.red.cgColor,andThickness: 4.0)
 	}
 
 	private func setupCountryPicker() {

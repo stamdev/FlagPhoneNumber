@@ -55,6 +55,14 @@ class ViewController: UIViewController {
 
 		// Set the phone number directly
 		//		phoneNumberTextField.set(phoneNumber: "+33612345678")
+        let border = CALayer()
+        border.backgroundColor = UIColor.red.cgColor
+        border.frame = CGRect(x: 0, y: phoneNumberTextField.leftView!.frame.maxY, width: phoneNumberTextField.leftView!.frame.width+30, height: 4.0)
+//        self.layer.addSublayer(border)
+        
+        border.name = "border"
+        
+        phoneNumberTextField.leftView?.layer.addSublayer(border)
 
 		view.addSubview(phoneNumberTextField)
 
@@ -75,20 +83,30 @@ class ViewController: UIViewController {
 extension ViewController: FPNTextFieldDelegate {
 
 	func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
-		textField.rightViewMode = .always
-		textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
-
-		print(
-			isValid,
-			textField.getFormattedPhoneNumber(format: .E164),
-			textField.getFormattedPhoneNumber(format: .International),
-			textField.getFormattedPhoneNumber(format: .National),
-			textField.getFormattedPhoneNumber(format: .RFC3966),
-			textField.getRawPhoneNumber()
-		)
+//        textField.rightViewMode = .always
+//        textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
+//
+//        print(
+//            isValid,
+//            textField.getFormattedPhoneNumber(format: .E164),
+//            textField.getFormattedPhoneNumber(format: .International),
+//            textField.getFormattedPhoneNumber(format: .National),
+//            textField.getFormattedPhoneNumber(format: .RFC3966),
+//            textField.getRawPhoneNumber()
+//        )
 	}
 
 	func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        phoneNumberTextField.layoutSubviews()
+        let layers = self.phoneNumberTextField.leftView!.layer.sublayers
+        for layer in layers! {
+            if layer.name == "border"{
+                 layer.frame = CGRect(x: 0, y: phoneNumberTextField.leftView!.frame.maxY, width: phoneNumberTextField.leftView!.frame.width, height: 4.0)
+            }
+        }
+//        let border = phoneNumberTextField.leftView!.layer.sublayers
+//        border!.frame = CGRect(x: 0, y: phoneNumberTextField.leftView!.frame.maxY, width: phoneNumberTextField.leftView!.frame.width, height: 4.0)
+        phoneNumberTextField.layoutSubviews()
 		print(name, dialCode, code)
 	}
 }
