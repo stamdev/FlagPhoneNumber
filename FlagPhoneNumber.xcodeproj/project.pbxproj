@@ -13,7 +13,6 @@
 		0D9D4BB621E6566F004E7BB9 /* FPNFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BA521E6566F004E7BB9 /* FPNFormat.swift */; };
 		0D9D4BB721E6566F004E7BB9 /* FPNCountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D4BA721E6566F004E7BB9 /* FPNCountryView.xib */; };
 		0D9D4BB821E6566F004E7BB9 /* countryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D4BA821E6566F004E7BB9 /* countryCodes.json */; };
-		0D9D4BB921E6566F004E7BB9 /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D4BA921E6566F004E7BB9 /* FlagKit.xcassets */; };
 		0D9D4BBA21E6566F004E7BB9 /* FlagPhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BAA21E6566F004E7BB9 /* FlagPhoneNumberTextField.swift */; };
 		0D9D4BBB21E6566F004E7BB9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BAC21E6566F004E7BB9 /* Bundle+Extension.swift */; };
 		0D9D4BBC21E6566F004E7BB9 /* FlagPhoneNumberTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BAD21E6566F004E7BB9 /* FlagPhoneNumberTextFieldDelegate.swift */; };
@@ -23,6 +22,7 @@
 		0D9D4BC021E6566F004E7BB9 /* FPNCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BB221E6566F004E7BB9 /* FPNCountryView.swift */; };
 		0D9D4BC121E6566F004E7BB9 /* FPNCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BB321E6566F004E7BB9 /* FPNCountry.swift */; };
 		0D9D4BC221E6566F004E7BB9 /* FlagPhoneNumberDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D4BB421E6566F004E7BB9 /* FlagPhoneNumberDelegate.swift */; };
+		89FA6EC622158A9F00D7E30A /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FA6EC522158A9F00D7E30A /* FlagKit.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		0D9D4BA521E6566F004E7BB9 /* FPNFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPNFormat.swift; sourceTree = "<group>"; };
 		0D9D4BA721E6566F004E7BB9 /* FPNCountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPNCountryView.xib; sourceTree = "<group>"; };
 		0D9D4BA821E6566F004E7BB9 /* countryCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countryCodes.json; sourceTree = "<group>"; };
-		0D9D4BA921E6566F004E7BB9 /* FlagKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FlagKit.xcassets; sourceTree = "<group>"; };
 		0D9D4BAA21E6566F004E7BB9 /* FlagPhoneNumberTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumberTextField.swift; sourceTree = "<group>"; };
 		0D9D4BAC21E6566F004E7BB9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		0D9D4BAD21E6566F004E7BB9 /* FlagPhoneNumberTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumberTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		0D9D4BB221E6566F004E7BB9 /* FPNCountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPNCountryView.swift; sourceTree = "<group>"; };
 		0D9D4BB321E6566F004E7BB9 /* FPNCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPNCountry.swift; sourceTree = "<group>"; };
 		0D9D4BB421E6566F004E7BB9 /* FlagPhoneNumberDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagPhoneNumberDelegate.swift; sourceTree = "<group>"; };
+		89FA6EC522158A9F00D7E30A /* FlagKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FlagKit.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			children = (
 				0D9D4BA721E6566F004E7BB9 /* FPNCountryView.xib */,
 				0D9D4BA821E6566F004E7BB9 /* countryCodes.json */,
-				0D9D4BA921E6566F004E7BB9 /* FlagKit.xcassets */,
+				89FA6EC522158A9F00D7E30A /* FlagKit.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 			files = (
 				0D9D4BB721E6566F004E7BB9 /* FPNCountryView.xib in Resources */,
 				0D9D4BB821E6566F004E7BB9 /* countryCodes.json in Resources */,
-				0D9D4BB921E6566F004E7BB9 /* FlagKit.xcassets in Resources */,
+				89FA6EC622158A9F00D7E30A /* FlagKit.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -372,6 +372,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FlagPhoneNumber/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +400,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FlagPhoneNumber/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
