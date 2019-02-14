@@ -28,7 +28,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	/// The size of the leftView
 	public var leftViewSize: CGSize {
 //        let width = flagSize.width + flagButtonEdgeInsets.left + flagButtonEdgeInsets.right + phoneCodeTextField.frame.width
-        let width =  flagButtonEdgeInsets.left + 70 + flagButtonEdgeInsets.right
+        let width =  flagButtonEdgeInsets.left + 75 + flagButtonEdgeInsets.right
 		let height = bounds.height
 
 		return CGSize(width: width, height: height)
