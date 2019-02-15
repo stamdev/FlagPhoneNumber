@@ -128,7 +128,6 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	private func setupFlagButton() {
-        flagButton.frame.size = CGSize(width: 20, height: 20)
 		flagButton.contentHorizontalAlignment = .left
 		flagButton.contentVerticalAlignment = .fill
 		flagButton.imageView?.contentMode = .scaleAspectFit
