@@ -128,7 +128,8 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	private func setupFlagButton() {
-		flagButton.contentHorizontalAlignment = .fill
+        
+		flagButton.contentHorizontalAlignment = .left
 		flagButton.contentVerticalAlignment = .fill
 		flagButton.imageView?.contentMode = .scaleAspectFit
 		flagButton.accessibilityLabel = "flagButton"
@@ -144,7 +145,6 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	private func setupLeftView() {
-        phoneCodeTextField.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 
 		leftViewMode = .always
 		leftView = UIView()
