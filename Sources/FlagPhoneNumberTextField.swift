@@ -298,7 +298,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 
 		if let phoneCode = selectedCountry?.phoneCode {
 			phoneCodeTextField.text = phoneCode
-			phoneCodeTextField.sizeToFit()
+//            phoneCodeTextField.sizeToFit()
 			layoutSubviews()
 		}
 
