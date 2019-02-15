@@ -19,7 +19,7 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	/// The edges insets of the flag button
-	public var flagButtonEdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
+	public var flagButtonEdgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 2) {
 		didSet {
 			layoutSubviews()
 		}
@@ -144,15 +144,19 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 	}
 
 	private func setupLeftView() {
+        phoneCodeTextField.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+
 		leftViewMode = .always
 		leftView = UIView()
 		leftView?.addSubview(flagButton)
 		leftView?.addSubview(phoneCodeTextField)
 
+
 		let views = ["flag": flagButton, "textField": phoneCodeTextField]
 		let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[flag]-(0)-[textField]|", options: [], metrics: nil, views: views)
 
 		leftView?.addConstraints(horizontalConstraints)
+        
 
 		for key in views.keys {
 			leftView?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[\(key)]|", options: [], metrics: nil, views: views))
